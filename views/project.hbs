@@ -1,0 +1,39 @@
+<!--
+    This page is used to update the project
+-->
+
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <h2>{{project.projectName}}</h2>
+        <hr />
+
+        {{#unless project}}
+            <div class="col-md-12 text-center">
+                <strong>{{message}}</strong>
+            </div>
+        {{/unless}}
+        
+        <form method="POST" action="/project/update">    
+            <input type="hidden" name="projectId" value="{{project.projectId}}">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input class="form-control" id="projectName" name="projectName" type="text" 
+                            value="{{project.projectName}}" />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="projectDescription">Project Description</label>
+                        <input class="form-control" id="projectDescription" name="projectDescription" type="text" 
+                            value="{{project.projectDescription}}" />
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <input type="submit" class="btn btn-primary float-right" value="Update Project" /><br /><br /><br />
+        </form>
+    </div>
+</div>
