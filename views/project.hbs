@@ -1,5 +1,5 @@
 <!--
-    This page is used to update the project
+    This page is used to update the project 
 -->
 
 <div class="row">
@@ -17,18 +17,15 @@
         <form method="POST" action="/project/update">    
             <input type="hidden" name="projectId" value="{{project.projectId}}">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="projectName">Project Name</label>
                         <input class="form-control" id="projectName" name="projectName" type="text" 
                             value="{{project.projectName}}" />
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="form-group">
+                    
                         <label for="projectDescription">Project Description</label>
-                        <input class="form-control" id="projectDescription" name="projectDescription" type="text" 
-                            value="{{project.projectDescription}}" />
+                        <textarea class="form-control" id="projectDescription" name="projectDescription" rows="8"
+                        >{{project.projectDescription}}</textarea>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,32 @@
+<!-- 
+    
+    This page displays a list of projects, can choose to add, update, or remove a project 
+    
+-->
+
 <div class="row">
-	<main class="col-md-12">
-	
+	<div class="col-md-12">
+		<br>
+		<h2>
+			Projects
+		</h2>
+		<hr />
 
-		
+		<div>
+			{{#each projects}}
+			<fieldset>
+				<legend>{{this.projectName}}</legend>
+				<p><b>Description</b>: {{this.projectDescription}}</p>
+			</fieldset>
+			<hr />
+			{{/each}}
+		</div>
 
-	</main>
+		{{#unless projects}}
+		<div class="col-md-12 text-center">
+			<strong>{{message}}</strong>
+		</div>
+		{{/unless}}
+
+	</div>
 </div>

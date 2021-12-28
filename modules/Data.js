@@ -11,22 +11,6 @@ var sequelize = new Sequelize('d28fqpu74g0i2t', 'wdujodsexbhwzo',
         query: { raw: true }
     });
 
-// var Student = sequelize.define('Student', {
-//     studentNum: {
-//         type: Sequelize.INTEGER,
-//         primaryKey: true,
-//         autoIncrement: true
-//     },
-//     firstName: Sequelize.STRING,
-//     lastName: Sequelize.STRING,
-//     email: Sequelize.STRING,
-//     addressStreet: Sequelize.STRING,
-//     addressCity: Sequelize.STRING,
-//     addressProvince: Sequelize.STRING,
-//     TA: Sequelize.BOOLEAN,
-//     status: Sequelize.STRING
-// })
-
 var Project = sequelize.define('Project', {
     projectId: {
         type: Sequelize.INTEGER,
@@ -55,7 +39,9 @@ module.exports.initialize = function () {
 // get all projects
 module.exports.getProjects = function () {
     return new Promise(function (resolve, reject) {
-        Project.findAll().then(allProjects => {
+        Project.findAll({
+            order: ['projectId']
+        }).then(allProjects => {
             resolve(allProjects);
         }).catch(() => {
             reject('no results returned');
@@ -102,7 +88,7 @@ module.exports.updateProject = function (projectData) {
             projectData[prop] = null;
         }
     }
-    
+
     return new Promise((resolve, reject) => {
         Project.update(
             projectData, {
@@ -135,130 +121,3 @@ module.exports.deleteProjectById = function (id) {
 }
 
 //====================================
-
-
-
-
-// // get all students
-// module.exports.getAllStudents = function () {
-//     return new Promise(function (resolve, reject) {
-//         Student.findAll({
-//             order: ['studentNum']
-//         }).then(allStudent => {
-//             resolve(allStudent);
-//         }).catch(() => {
-//             reject('no results returned');
-//         })
-
-//     });
-// }
-
-// // get all students by course id
-// module.exports.getStudentsByCourse = function (course) {
-//     return new Promise(function (resolve, reject) {
-//         Student.findAll({
-//             where: {
-//                 course: course
-//             }
-//         }).then(allStudent => {
-//             resolve(allStudent);
-//         }).catch(() => {
-//             reject('no results returned');
-//         })
-//     });
-// }
-
-// // get all students who are TAs
-// module.exports.getTAs = function () {
-//     return new Promise(function (resolve, reject) {
-//         Student.findAll({
-//             where: {
-//                 TA: true
-//             }
-//         }).then(allStudent => {
-//             resolve(allStudent);
-//         }).catch(() => {
-//             reject('no results returned');
-//         })
-
-//     });
-// }
-
-
-// // get the student by number
-// module.exports.getStudentByNum = function (num) {
-//     return new Promise(function (resolve, reject) {
-//         Student.findAll({
-//             where: {
-//                 studentNum: num
-//             }
-//         }).then(allStudent => {
-//             resolve(allStudent[0]);
-//         }).catch(() => {
-//             reject('no results returned');
-//         })
-//     })
-// }
-
-
-// // add student 
-// module.exports.addStudent = function (studentData) {
-
-//     for (prop in studentData) {
-//         if(studentData[prop] == ''){
-//             studentData[prop] = null;
-//         }
-//     }
-//     studentData.TA = (studentData.TA) ? true : false;
-
-//     return new Promise(function (resolve, reject) {
-//         Student.create(studentData).then(() => {
-//             resolve("success");
-//         }).catch(() => {
-//             reject('unable to create student');
-//         })
-
-//     });
-// }
-
-// // update student
-// module.exports.updateStudent = function (studentData) {
-
-//     for (prop in studentData) {
-//         if(studentData[prop] == ''){
-//             studentData[prop] = null;
-//         }
-//     }
-//     studentData.TA = (studentData.TA) ? true : false;
-
-//     return new Promise(function (resolve, reject) {
-//         Student.update(
-//             studentData,{
-//                 where:{
-//                     studentNum : studentData.studentNum
-//                 }
-//             }
-//         ).then(() => {
-//             resolve('success')
-//         }).catch(() => {
-//             reject('unable to update student')
-//         })
-//     });
-// }
-
-
-
-// // delete student
-// module.exports.deleteStudentByNum = function(studentNum){
-//     return new Promise((resolve,reject)=>{
-//         Student.destroy({
-//             where:{
-//                 studentNum : studentNum
-//             }
-//         }).then(()=>{
-//             resolve("destroyed")
-//         }).catch(()=>{
-//             reject('unable to delete')
-//         })
-//     })
-// }

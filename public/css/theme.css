@@ -6,7 +6,7 @@
 
 
 body {
-    background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBoxGxMVITEhMSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDw0NDjMZFRkrLTcrNzErLDctKzctLS0rKy0tKysrKystLS0tLSsrKystLSsrLSsrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAABAgADBAUH/8QAIBABAQEBAAICAgMAAAAAAAAAAAERAmGRAxNx8BQxUf/EABgBAQEBAQEAAAAAAAAAAAAAAAIBAAME/8QAHREBAQEBAAIDAQAAAAAAAAAAAAERAhJRAzFSQf/aAAwDAQACEQMRAD8A/R4qAx6XlioqJi4NOKi4mKgmuLiIuIqoqJiojKhBZGTVJqjU1NVU0o51FTVVNOOdSCCFmBZCYDEWKhgiohQwwRQkzMzMAoMlTQqxJBQDYFF44YxgvVIYuJi4NOQxcTFwSkVFxMVEVUVBDEZTMzJWFIpQaipqqilHOpqaqopxyoFYEFYwGMxiomKiFFRUEVBpQnGkOCeNjHGZsSFisliLE1aaQWJGKCjjxloYL1QxcTFQacVFxMVEJUVExcFVQwQshIZkrCsKUCpqaamlHOpqKqppxyoSaCCsqJMZlxUTFwacVFyJkXBpyGHGkVgngY4yLiRVCqNRQqppBUhVCg8cMaGC9UMVBFRDhi4mKgkqGCGIyoQWYsGYawrClAqammppRzqamqqaccqmg1iBlRKozRUdIiOnIV0iouCLgV0hhaETGMRWYVNVU0hqamqqaoUBqCCvMYxF6Y0VBFQSioYIpDMIhRVMCyMzBkrCsKUCipqqmlHOpqaoE52JYsQYFSNFSI2GOkRFxKcXFxEXArpFQph0TIbU2qlapptTaoWipptRaUCkDRqhXIsReloqCKiHDDGIlGLMilmZlZgzIwIUKKmqBBYkKwYQWJxsU2KGCRUYxkwxUEMQouKlc9OoUrprajW1MXVaLU6LVxLTam0WptXAtNqbWtTaWBadCbRq4OqLFzemNFNChxizCcLMyEzMzKzBmRmZmShsLFAsS2KwKFgxjjKNgJZRZgWY62p0ayavRqdTq4mr0Wo0Wriaq0Wp0Wrg2m0WptFpYFp1tRrauDr0li4vXKygRpysWZHSMzATjMwZSwZFLMyoxZmGxmwnCCxONisbFCxIVgUaKDU0gotFrVNUbWtFotTaUgWm0am0auDqtGp0auDqrRqbRauDadbU6NXB19EguD2ykiEacrMzC6QMwR0jMAhQlJQiUmMioYIqMlYtCoVsGKxsIKnE1dTVgVFTV1FKOdRU1VRTjnU2otVUU450WjWtTVG06NGjVwdOjRo1cG06NA0sHX1ikvK9sqimFDlIYC6ysGoo11jaNbRqHCydOoSoqIiozLiomKjDVRQioo1sYso1KaupqxzrnUVfSOjjnXOuddOnPp0jjUVFXUU451NTTU0grDWqao2sGFULW1tGhR19ghnle6KjAocYEUXXkUU1NGusFBSLpCUlDVFRMVGZcXERcYVxUTFRRpY4zDU1NXYilAqOnPp06c+jjl051z6dOnPp0jj051FXUU45VFTVU/V1+0tkHLfqOaXW/D149i/D149t5T2N469OVDr9PXj2m/B149wvKexvHX5cw6/R149xv4/f+T3G8p7Hw6/L6hjM8z2RizI6RhWYa68iprMLrBQzI6QFmE1RUZmZcXyzMNXFxmUaY1LKNSmsywK59OdLHHHpy6c+mZ0jl051FZjjlUV65/U/EZh+T+Onw/dZmZydwGZRYMzM/9k=') no-repeat center center fixed;
+    background: url('https://media.istockphoto.com/photos/the-gray-and-silver-are-light-black-with-white-the-gradient-is-the-picture-id1322292759?b=1&k=20&m=1322292759&s=170667a&w=0&h=FtcK2R11RjeMUkMUWu5kxFmYR8pY-G8OLs99PnWIJpE=') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -90,15 +90,15 @@ legend {
 .btn {
     border-radius: 20px;
     border: none;
-    background-color: darkgreen;
+    background-color: rgb(22, 0, 100);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .btn:hover {
     font-weight: bold;
-    background-color: yellowgreen;
+    background-color: rgb(50, 130, 205);
 }
-
+    
 label {
     font-size: 17px;
     font-weight: bold;

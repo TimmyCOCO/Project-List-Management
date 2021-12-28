@@ -47,6 +47,7 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 const Data = require("./modules/Data");
 
+
 // Get all students or some students
 // app.get('/students', (req, res) => {
 //     // if have parameter, then Get some students via course number
@@ -133,6 +134,25 @@ app.get('/project/addProjectPage', (req, res) => {
 })
 
 // Get all projects
+app.get('/projects', (req, res) => {
+    Data.getProjects().then(data => {
+        if (data.length > 0) {
+            res.render("static/projects", {
+                projects: data
+            });
+        } else {
+            res.render("static/projects", {
+                message: "no results"
+            });
+        }
+    }).catch(() => {
+        res.render("static/projects", {
+            message: "no results"
+        });
+    });
+});
+
+// Get all projects
 app.get('/projectList', (req, res) => {
     Data.getProjects().then(data => {
         if (data.length > 0) {
@@ -140,12 +160,12 @@ app.get('/projectList', (req, res) => {
                 projects: data
             });
         } else {
-            res.render("projectList", {
+            res.render("static/projects", {
                 message: "no results"
             });
         }
     }).catch(() => {
-        res.render("projectList", {
+        res.render("static/projects", {
             message: "no results"
         });
     });
