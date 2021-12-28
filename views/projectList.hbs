@@ -17,7 +17,6 @@
                 <thead>
                     <tr>
                         <th>Project Name</th>
-                        <th>Project Description</th>
                     </tr>
                 </thead>
 
@@ -25,7 +24,7 @@
                     {{#each projects}}
                     <tr>
                         <td><a href="/project/{{this.projectId}}">{{this.projectName}}</a></td>
-                        <td>{{this.projectDescription}}</a></td>
+                       
                         <td><a class="btn btn-danger" href='/project/delete/{{this.projectId}}'>Remove</a></td>
                     </tr>
                     {{/each}}

@@ -48,82 +48,6 @@ const HTTP_PORT = process.env.PORT || 8080;
 const Data = require("./modules/Data");
 
 
-// Get all students or some students
-// app.get('/students', (req, res) => {
-//     // if have parameter, then Get some students via course number
-//     if (req.query.course) {
-//         Data.getStudentsByCourse(req.query.course).then(data => {
-//             //res.json(data);
-//             if (data.length > 0) {
-//                 res.render("students", {
-//                     students: data
-//                 });
-//             } else {
-//                 res.render("students", {
-//                     message: "no results"
-//                 });
-//             }
-//         }).catch(() => {
-//             // res.status(500).json({ message: "no results" });
-//             res.render("students", {
-//                 message: "no results"
-//             });
-//         });
-
-//     } else { // if don't have paramter, then Get all students
-//         Data.getAllStudents().then(data => {
-//             // res.json(data);    
-//             if (data.length > 0) {
-//                 res.render("students", {
-//                     students: data
-//                 });
-//             } else {
-//                 res.render("students", {
-//                     message: "no results"
-//                 });
-//             }
-//         }).catch(() => {
-//             // res.status(500).json({ message: "no results" });
-//             res.render("students", {
-//                 message: "no results"
-//             });
-//         });
-//     }
-// })
-
-
-// app.get("/student/:studentNum", (req, res) => {
-//     // initialize an empty object to store the values
-//     let viewData = {};
-//     Data.getStudentByNum(req.params.studentNum).then((data) => {
-//         if (data) {
-//             viewData.student = data; //store student data in the "viewData" object as "student"
-//         } else {
-//             viewData.student = null; // set student to null if none were returned
-//         }
-//     }).catch(() => {
-//         viewData.student = null; // set student to null if there was an error
-//     }).then(Data.getCourses)
-//         .then((data) => {
-//             viewData.courses = data; // store course data in the "viewData" object as "courses"
-//             // loop through viewData.courses and once we have found the courseId that matches
-//             // the student's "course" value, add a "selected" property to the matching
-//             // viewData.courses object
-//             for (let i = 0; i < viewData.courses.length; i++) {
-//                 if (viewData.courses[i].courseId == viewData.student.course) {
-//                     viewData.courses[i].selected = true;
-//                 }
-//             }
-//         }).catch(() => {
-//             viewData.courses = []; // set courses to empty if there was an error
-//         }).then(() => {
-//             if (viewData.student == null) { // if no student - return an error
-//                 res.status(404).send("Student Not Found");
-//             } else {
-//                 res.render("student", { viewData: viewData }); // render the "student" view
-//             }
-//         });
-// });
 
 //=====================================================
 // Processing Project Pages and Data
@@ -209,50 +133,6 @@ app.get('/project/delete/:id', (req, res) => {
 })
 
 //=====================================================
-
-// // display add student page
-// app.get('/students/add/', (req, res) => {
-//     collegeData.getCourses().then((data) => {
-//         res.render('addStudent', {
-//             courses: data
-//         });
-//     }).catch(() => {
-//         res.render('addStudent', {
-//             courses: []
-//         })
-//     })
-
-// })
-
-// // Add Student
-// app.post('/students/add', (req, res) => {
-//     collegeData.addStudent(req.body).then(() => {
-//         res.redirect("/students")
-//     })
-// })
-
-// // Update Student
-// app.post('/student/update', (req, res) => {
-//     //console.log(req.body);
-//     collegeData.updateStudent(req.body).then(() => {
-//         res.redirect("/students");
-//     })
-// })
-
-
-
-
-
-
-// delete student
-app.get('/student/delete/:studentNum', (req, res) => {
-    collegeData.deleteStudentByNum(req.params.studentNum).then(() => {
-        res.redirect('/students');
-    }).catch(() => {
-        res.status(500).send('Unable to Remove Student / Student Not Found')
-    })
-})
-
 
 // Home Page
 app.get('/', (req, res) => {
