@@ -84,7 +84,7 @@ app.get('/projectList', (req, res) => {
                 projects: data
             });
         } else {
-            res.render("static/projects", {
+            res.render("projectList", {
                 message: "no results"
             });
         }
