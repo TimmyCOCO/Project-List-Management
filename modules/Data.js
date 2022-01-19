@@ -18,7 +18,7 @@ var Project = sequelize.define('Project', {
         autoIncrement: true
     },
     projectName: Sequelize.STRING,
-    projectDescription: Sequelize.STRING(255)
+    projectDescription: Sequelize.STRING(512)
 })
 
 
