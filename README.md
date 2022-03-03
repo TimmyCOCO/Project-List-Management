@@ -1,5 +1,5 @@
 # Project-List-Management-Application
-This is a project developed by NodeJS-Express and Handlebars based on the previous application.
+This is a project developed by NodeJS-Express and Handlebars based on the previous application. /n
 
 The web application uses **NodeJS-Express + Handlebars** to store the information of projects into Postgres database.
 
