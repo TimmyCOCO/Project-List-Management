@@ -1,7 +1,7 @@
 # Project-List-Management-Application
 This is a project developed based on the previous application. 
 
-The web application mainly uses **NodeJS-Express + Handlebars** to CRUD the information of projects into Postgres database.
+The web application mainly uses **NodeJS-Express + Handlebars** to develop. It allows to CRUD the information of projects into Postgres database.
 
 
 ## Steps to work:
@@ -13,6 +13,9 @@ The web application mainly uses **NodeJS-Express + Handlebars** to CRUD the info
 3. A directory called **node_modules** will be installed in the project directory.
 
 
+## The web deployed on Heroku:
+Link: https://welcome2022.herokuapp.com/projects
+
 ## Additional Resources : 
 
 About how to install and use Express:
@@ -22,5 +25,3 @@ About how to install and use Handlebars:
 https://www.npmjs.com/package/handlebars
 
 
-The web deployed on Heroku:
-Link: https://welcome2022.herokuapp.com/projects
