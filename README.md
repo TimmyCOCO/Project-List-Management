@@ -1,9 +1,10 @@
 # Project-List-Management-Application
-This is a project developed by NodeJS-Express and Handlebars based on the previous application. /n
+This is a project developed based on the previous application. 
 
-The web application uses **NodeJS-Express + Handlebars** to store the information of projects into Postgres database.
+The web application mainly uses **NodeJS-Express + Handlebars** to CRUD the information of projects into Postgres database.
 
 
+## Steps to work:
 1. Use the command in the project directory: **npm init**  
 
 2. Install the following items: 
